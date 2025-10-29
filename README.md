@@ -46,47 +46,47 @@ With the help of HTML, we will use JavaScript for the Home Page and each martial
 
 ## Website Wireframe
 
-### Home Page
-  ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
+## Home Page
+  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 
 <p>Website Description</p>
 
-## Taekwondo
-## Judo
-## Karate
-## BJJ
-## Muay Thai
-## References
+### Taekwondo
+### Judo
+### Karate
+### BJJ
+### Muay Thai
+### References
 
-### About Us
-  ## Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
+## About Us
+  ### Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
 
 <p>Author Description</p>
 
 <p>Picture of Author A</p> <p>Picture of Author B</p>
 
-### Taekwondo
-  ## Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
+## Taekwondo
+  ### Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
   <p>Description of Taekwondo</p>
 
-### Judo
-  ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
+## Judo
+  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
   <p>Description of Judo</p>
 
-### Karate
-  ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
+## Karate
+  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of Karate</p>
 
-### BJJ
-  ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
+## BJJ
+  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of BJJ</p>
 
-### Muay Thai
-  ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
+## Muay Thai
+  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of Muay Thai</p>
 
-### References
-  ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
+## References
+  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 
 <p>References usec for Taekwondo</p>
 <p>References used for Judo</p> 
