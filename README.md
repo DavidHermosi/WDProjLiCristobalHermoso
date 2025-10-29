@@ -56,7 +56,7 @@ With the help of HTML, we will use JavaScript for the Home Page and each martial
 ## Karate
 ## BJJ
 ## Muay Thai
-## Refernces
+## References
 
 ### About Us
   ## Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
@@ -68,18 +68,23 @@ With the help of HTML, we will use JavaScript for the Home Page and each martial
 ### Taekwondo
   ## Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
   <p>Description of Taekwondo</p>
+
 ### Judo
   ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
   <p>Description of Judo</p>
+
 ### Karate
   ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of Karate</p>
+
 ### BJJ
   ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of BJJ</p>
+
 ### Muay Thai
   ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of Muay Thai</p>
+
 ### References
   ## Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 
