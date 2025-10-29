@@ -38,7 +38,6 @@
 </p>
 
 ### Incorporation of JS:
-<p></p>
-
-BJJ would be first opened to the world in 1925 by Carlos Gracie and his family, after being taught by a Jiu-Jitsu master, Mitsuyo Maeda, who arrived in Brazil in 1915.
+<p>
+With the help of HTML, we will use JavaScript for the Home Page and each martial art's webpage. The purpose of this is to make our website eye-catching and to attract people interested in our website, and who may also be interested in practicing one of these martial arts.
 </p>
