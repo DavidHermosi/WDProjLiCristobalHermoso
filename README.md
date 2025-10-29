@@ -4,6 +4,8 @@
 ### Title:
 <p>Martial Arts and The World</p>
 
+![Logo Design](hermoso_cristobal_logo.png)
+
 ### Site Description:
 <p>We aim for our website to show appreciation and acknowledge the cultural beauty and diversity of the Top 5 most practiced martial arts around the world. Our website provides an overview of the origins and descriptions of each martial art we include. By exploring the origins, philosophies, and defining techniques of each martial art, we seek to honor how these disciplines have shaped cultures and connected people across the globe.
 </p>
