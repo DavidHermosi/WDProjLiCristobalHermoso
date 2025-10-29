@@ -28,7 +28,7 @@
     This webpage will focus on describing the martial art of Karate. This webpage will also provide information on its meaning, origins, the number of practitioners, techniques, and progression of the martial art.
 </p> 
 
-5. Brazilian Jiu-Jitsu (BJJ:
+5. Brazilian Jiu-Jitsu (BJJ):
 <p>
   This webpage will focus on describing the martial art of Brazilian Jiu-Jitsu. This webpage will also provide information on its meaning, origins, the number of practitioners, techniques, and progression of the martial art.
 </p>
