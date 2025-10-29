@@ -68,22 +68,27 @@ With the help of HTML, we will use JavaScript for the Home Page and each martial
 ## Taekwondo
   ### Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
   <p>Description of Taekwondo</p>
+  <p>Pictures and Videos of Taekwondo players</p>
 
 ## Judo
   ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
   <p>Description of Judo</p>
+  <p>Pictures and Videos of Judo players</p>
 
 ## Karate
   ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of Karate</p>
+<p>Pictures and Videos of Karate players</p>
 
 ## BJJ
   ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of BJJ</p>
+<p>Pictures and Videos of BJJ players</p>
 
 ## Muay Thai
   ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
 <p>Description of Muay Thai</p>
+<p>Pictures and Videos of Muay Thai players</p>
 
 ## References
   ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
