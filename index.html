@@ -59,20 +59,65 @@
     }
 </style>
 
+<style>
+    body {
+        font-family: Tahoma, sans-serif;
+        background-color: #101820;
+        border: 1px solid rgba(124, 245, 255, 0.1);
+        border-radius: 16px;
+        padding: 1.5rem;
+        text-align: center;
+        text-decoration: none;
+        color: #E8F0F2;
+        box-shadow: 0 0 12px rgba(0, 183, 194, 0.08);
+        transition: transform 0.25s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+        backdrop-filter: blur(6px);
+        }
+    header {
+      background-color: #182838;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      object-fit: cover;
+    }
+
+    h1, nav a{
+        color: white;
+        letter-spacing: 5 cm;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.5s ease-out, color 0.5s ease-out;
+    }
+
+     a:hover {
+        background-image: radial-gradient(#233950, #214162, #0d253c);
+        font-size: 300px;
+        text-decoration: underline;
+        border-radius: 25px;
+        color: #09131d;
+        font-size: 18px;
+        transform: scale(2);
+    }
+</style>
+
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="./public/AU.html">About Us</a></li>
-                <li><a href="./public/KT.html">Karate</a></li>
-                <li><a href="./public/TKD.html">Taekwondo</a></li>
-                <li><a href="./public/KF.html">Kung Fu</a></li>
-                <li><a href="./public/JD.html">Judo</a></li>
-                <li><a href="./public/BJJ.html">Brazilian Jiu Jitsu</a></li>
-                <li><a href="./public/MT.html">Muay Thai</a></li>
-                <li><a href="./public/Ref.html">References</a></li>
-            </ul>
+            <h1>
+               <a href="index.html">Home</a>
+                <a href="./public/AU.html">About Us</a>
+                <a href="./public/KT.html">Karate</a>
+                <a href="./public/TKD.html">Taekwondo</a>
+                <a href="./public/KF.html">Kung Fu</a>
+                <a href="./public/JD.html">Judo</a>
+                <a href="./public/BJJ.html">Brazilian Jiu Jitsu</a>
+                <a href="./public/MT.html">Muay Thai</a>
+                <a href="./public/Ref.html">References</a>
+            </h1>
         </nav>
     </header>
     <main>
