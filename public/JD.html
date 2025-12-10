@@ -16,6 +16,12 @@
 </head>
 
 <body>
+        // Background Video
+    <video id="bg-video" autoplay muted loop>
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-martial-artist-practicing-karate-movements-31114-large.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
     <header>
         <nav>
             <h1>
@@ -27,9 +33,77 @@
                 <a href="./BJJ.html">Brazilian Jiu Jitsu</a>
                 <a href="./MT.html">Muay Thai</a>
                 <a href="./Ref.html">References</a>
-            </nav>
             </h1>
         </nav>
     </header>
+
+    <main>
+        <h2>Taekwondo</h2>
+        <ul>
+            <li>Korean Martial Arts where Tae means "foot", Kwon means "fist", and Do means "art or the way".</li>
+            <li>Taekwondo also means to use all body parts the correct way to stop fights, and bring peace.</li>
+            <li>Around 80 million people do this sport in Asia, Africa, Pan America, and Oceana.</li>
+            <li>Taekwondo originated from Korea and was based on earlier self-defense, Tae Kyon and Karate. Choi Hong-Hi, the principal of Taekwondo, founded this martial art in 1955.</li>
+        </ul>
+
+        <!--Moves-->>
+        <div class="moves-section">
+            <h2 style="margin-top: 40px; margin-bottom: 20px;">Notable Techniques</h2>
+            
+            <!-- Move 1: Tornado Kick -->
+            <div class="moves-dropdown" onclick="toggleMove(this)">
+                <div class="move-header">
+                    <h3>Tornado Kick (회오리 차기)</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="move-content">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/YArtz_Xlm78" allowfullscreen></iframe>
+                    </div>
+                    <p class="move-description">
+                        The Tornado Kick is a spectacular spinning kick that combines a 360-degree rotation with a powerful roundhouse kick. This advanced technique showcases the dynamic kicking abilities that Taekwondo is famous for.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Move 2: 540 Kick -->
+            <div class="moves-dropdown" onclick="toggleMove(this)">
+                <div class="move-header">
+                    <h3>540 Kick (540도 차기)</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="move-content">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/dC7bJMZPUPQ" allowfullscreen></iframe>
+                    </div>
+                    <p class="move-description">
+                        The 540 Kick is one of the most impressive aerial techniques in Taekwondo. The practitioner spins 540 degrees in the air before delivering a powerful kick, demonstrating extraordinary athleticism and control.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Move 3: Axe Kick -->
+            <div class="moves-dropdown" onclick="toggleMove(this)">
+                <div class="move-header">
+                    <h3>Axe Kick (내려 차기)</h3>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="move-content">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Vx75TtZ8hFY" allowfullscreen></iframe>
+                    </div>
+                    <p class="move-description">
+                        The Axe Kick involves raising the leg high and bringing the heel down in a chopping motion. This powerful vertical strike is effective for breaking through an opponent's guard and demonstrates flexibility and precision.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleMove(element) {
+            element.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
