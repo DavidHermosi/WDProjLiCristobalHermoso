@@ -16,10 +16,16 @@
 </head>
 
 <body>
+    <!-- Background Video -->
+    <video id="bg-video" autoplay muted loop>
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-martial-artist-practicing-karate-movements-31114-large.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
     <header>
         <nav>
             <h1>
-               <a href="index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="./public/AU.html">About Us</a>
                 <a href="./public/KT.html">Karate</a>
                 <a href="./public/TKD.html">Taekwondo</a>
@@ -30,15 +36,89 @@
             </h1>
         </nav>
     </header>
+
     <main>
-        <section id="home">
-            <h1>Welcome to My Martial Arts Portfolio</h1>
-            <p>Discover my journey and achievements in martial arts.</p>
+        <!-- Hero Welcome Section -->
+        <section class="hero-welcome">
+            <h1>🥋 Martial Arts and The World 🥋</h1>
+            <p class="subtitle">Explore the Ancient Traditions and Modern Techniques</p>
+            <p>
+                Welcome to our comprehensive guide to martial arts from across the globe. Discover the rich history, 
+                powerful techniques, and philosophical foundations of the world's most respected combat disciplines. 
+                Whether you're a beginner seeking knowledge or a practitioner deepening your understanding, 
+                embark on this journey through the warrior arts that have shaped cultures for centuries.
+            </p>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am David Hermoso, a passionate martial artist with years of experience in various disciplines.</p>
+
+        <!-- Martial Arts Cards Section -->
+        <h2 class="section-title">Explore Martial Arts</h2>
+        <div class="martial-arts-grid">
+            <!-- Karate Card -->
+            <a href="./public/KT.html" class="martial-art-card">
+                <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?w=600&h=400&fit=crop" alt="Karate" class="card-image">
+                <div class="card-content">
+                    <span class="card-emoji">🥋</span>
+                    <h3>Karate</h3>
+                    <p>The "empty hand" striking art from Okinawa emphasizing powerful punches, kicks, and kata forms.</p>
+                    <span class="card-origin">🇯🇵 Japan</span>
+                </div>
+            </a>
+
+            <!-- Taekwondo Card -->
+            <a href="./public/TKD.html" class="martial-art-card">
+                <img src="https://images.unsplash.com/photo-1555597408-26bc8e548a46?w=600&h=400&fit=crop" alt="Taekwondo" class="card-image">
+                <div class="card-content">
+                    <span class="card-emoji">🦵</span>
+                    <h3>Taekwondo</h3>
+                    <p>Korean martial art famous for spectacular spinning kicks, jumping techniques, and Olympic sport status.</p>
+                    <span class="card-origin">🇰🇷 Korea</span>
+                </div>
+            </a>
+
+            <!-- Judo Card -->
+            <a href="./public/JD.html" class="martial-art-card">
+                <img src="https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?w=600&h=400&fit=crop" alt="Judo" class="card-image">
+                <div class="card-content">
+                    <span class="card-emoji">🤼</span>
+                    <h3>Judo</h3>
+                    <p>The "gentle way" focusing on throws, takedowns, and grappling techniques to overcome opponents.</p>
+                    <span class="card-origin">🇯🇵 Japan</span>
+                </div>
+            </a>
+
+            <!-- Brazilian Jiu-Jitsu Card -->
+            <a href="./public/BJJ.html" class="martial-art-card">
+                <img src="https://images.unsplash.com/photo-1516567727245-ad8cd6cd8f3a?w=600&h=400&fit=crop" alt="BJJ" class="card-image">
+                <div class="card-content">
+                    <span class="card-emoji">🔒</span>
+                    <h3>Brazilian Jiu-Jitsu</h3>
+                    <p>Ground fighting mastery emphasizing submissions, leverage, and technique over strength.</p>
+                    <span class="card-origin">🇧🇷 Brazil</span>
+                </div>
+            </a>
+
+            <!-- Muay Thai Card -->
+            <a href="./public/MT.html" class="martial-art-card">
+                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?w=600&h=400&fit=crop" alt="Muay Thai" class="card-image">
+                <div class="card-content">
+                    <span class="card-emoji">💪</span>
+                    <h3>Muay Thai</h3>
+                    <p>The "Art of Eight Limbs" utilizing fists, elbows, knees, and shins for devastating strikes.</p>
+                    <span class="card-origin">🇹🇭 Thailand</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- About Preview Section -->
+        <section class="about-preview">
+            <h2>About This Project</h2>
+            <p>
+                Created by <strong>David Hermoso</strong> and <strong>Keisha Cristobal</strong> as part of our 2Q Web Development Portfolio. 
+                This website showcases our passion for martial arts and web design, bringing together comprehensive research, 
+                engaging visuals, and interactive elements to educate and inspire.
+            </p>
+            <a href="./public/AU.html" class="cta-button">Learn More About Us →</a>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can reach me at
+    </main>
+</body>
+</html>
