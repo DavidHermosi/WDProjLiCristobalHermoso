@@ -6,7 +6,7 @@
 
         body {
             font-family: Tahoma, sans-serif;
-            background-color: #101820;
+            background-color: #0A0E27;
             color: #E8F0F2;
             overflow-x: hidden;
         }
@@ -64,7 +64,7 @@
             background-image: radial-gradient(#233950, #214162, #0d253c);
             text-decoration: underline;
             border-radius: 12px;
-            color: #7CF5FF;
+            color: #DAA520;
             transform: scale(1.05);
             border-color: rgba(124, 245, 255, 0.3);
         }
@@ -78,7 +78,7 @@
         }
 
         main h2 {
-            color: #7CF5FF;
+            color: #DAA520;
             font-size: 2.5em;
             margin-bottom: 30px;
             letter-spacing: 3px;
@@ -145,13 +145,13 @@
         }
 
         .move-header h3 {
-            color: #7CF5FF;
+            color: #DAA520;
             font-size: 1.5em;
             letter-spacing: 2px;
         }
 
         .move-header .arrow {
-            color: #7CF5FF;
+            color: #DAA520;
             font-size: 1.5em;
             transition: transform 0.3s ease;
         }
