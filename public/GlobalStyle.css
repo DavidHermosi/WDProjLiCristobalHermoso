@@ -282,4 +282,59 @@ footer a:hover {
     text-decoration: underline;
 }
 
-        
+/* Developer Profile Layout */
+.developer-profile {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-direction: row; /* Side by side */
+}
+
+/* Developer Photo Styling */
+.developer-photo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid #DAA520;
+    box-shadow: 0 5px 20px rgba(124, 245, 255, 0.3);
+}
+
+.developer-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Developer Info Text */
+.developer-info {
+    flex: 1;
+}
+
+.developer-info p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #E8F0F2;
+}
+
+/* Remove list styling */
+.progression-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .developer-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .developer-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
