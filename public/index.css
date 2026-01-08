@@ -3,7 +3,7 @@
     /* Colors */
     --color-primary: #E30613;
     --color-bg-dark: #000000;
-    --color-bg-medium: #182838;
+    --color-bg-medium: #000000;
     --color-bg-hover: #233950;
     --color-text: #E8F0F2;
     --color-border: rgba(124, 245, 255, 0.1);
@@ -453,7 +453,7 @@ footer {
     background-color: #1A1F3A;
     padding: 30px 20px;
     text-align: center;
-    border-top: 3px solid #DAA520;
+    border-top: 3px solid #E30613;
     margin-top: 60px;
     
     /* invisible */
@@ -523,7 +523,7 @@ footer.visible .footer-copyright {
 }
 
 footer a {
-    color: #DAA520;
+    color: #E30613;
     text-decoration: none;
     transition: color 0.3s ease;
 }
