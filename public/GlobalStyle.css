@@ -11,6 +11,11 @@
             overflow-x: hidden;
         }
 
+        h1 , h2, h3{
+    font-family: "BBH Sans Bogle", sans-serif;
+}
+
+
         /* Fixed Background Video */
         #bg-video {
             position: fixed;

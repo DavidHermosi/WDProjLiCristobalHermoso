@@ -3,7 +3,7 @@
     /* Colors */
     --color-primary: #E30613;
     --color-bg-dark: #000000;
-    --color-bg-medium: #000000;
+    --color-bg-medium: #182838;
     --color-bg-hover: #233950;
     --color-text: #E8F0F2;
     --color-border: rgba(124, 245, 255, 0.1);
@@ -49,6 +49,11 @@ body {
     color: var(--color-text);
     overflow-x: hidden;
     line-height: 1.6;
+    
+}
+
+h1, h2 {
+    font-family: "BBH Sans Bogle", sans-serif;
 }
 
 /* BACKGROUND VIDEO */
@@ -448,7 +453,7 @@ footer {
     background-color: #1A1F3A;
     padding: 30px 20px;
     text-align: center;
-    border-top: 3px solid #E30613;
+    border-top: 3px solid #DAA520;
     margin-top: 60px;
     
     /* invisible */
@@ -518,7 +523,7 @@ footer.visible .footer-copyright {
 }
 
 footer a {
-    color: #E30613;
+    color: #DAA520;
     text-decoration: none;
     transition: color 0.3s ease;
 }
