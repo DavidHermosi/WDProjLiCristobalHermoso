@@ -98,5 +98,7 @@ Our website will use HTML forms for members who sign-up to have additional infor
 
 ## Sign Up
 
+![SignUp](./asset/SU%20Wireframe.png)
+
 
 
