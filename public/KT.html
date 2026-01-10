@@ -266,5 +266,28 @@
     </div>
 </footer>
         <script src="./index.js"></script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCXEAK5S-s6iZk3jnH4Qaj2WMilpTe_g6o",
+    authDomain: "martial-arts-and-the-world.firebaseapp.com",
+    projectId: "martial-arts-and-the-world",
+    storageBucket: "martial-arts-and-the-world.firebasestorage.app",
+    messagingSenderId: "512965869983",
+    appId: "1:512965869983:web:3b14e6877a390b82d83daa",
+    measurementId: "G-FBY8NT8EEJ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 </body>
 </html>
