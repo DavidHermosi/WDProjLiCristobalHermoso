@@ -38,7 +38,7 @@
 
 6. Muay Thai:
 <p>
-  This webpage describes the martial art of Muay Thai. This webpage will also provide information on its meaning, origins, the number of practitioners, techniques, and progression of the martial art.  Additionally, the webpage contains comprehensive tutorial videos on the stances, kicks, punches, elbow strikes, and knee strikes of the Muah Thai martial art.
+  This webpage describes the martial art of Muay Thai. This webpage will also provide information on its meaning, origins, the number of practitioners, techniques, and progression of the martial art.  Additionally, the webpage contains comprehensive tutorial videos on the stances, kicks, punches, elbow strikes, and knee strikes of the Muay Thai martial art.
 </p>
 
 7. References:
