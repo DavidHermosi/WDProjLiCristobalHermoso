@@ -46,6 +46,10 @@
   This webpage contains the references we used in gathering the information for our website. This webpage is for those who want proof or want to deepen their catalogue of sources as they seek more knowledge on martial arts.
 </p>
 
+8. Sign Up:
+<p>
+  This is the signup page where the users of the website will enter their username, email, and password. Once they sign up, they will have access to membership only content. 
+
 ### Incorporation of JS:
 <p>
 With the help of JS from the Home Page and each martial art's webpage, our website becomes eye-catching and interactive by using the JS to power our dropdowns, footers, and membership locked content. This can help feed digestable information to our users and to remove visual clutter from our website.
@@ -68,29 +72,24 @@ Our website will use HTML forms for members who sign-up to have additional infor
   ![AboutUs](./asset/AU%20Wireframes.png)
 
 ## Taekwondo
-  ### Home About Us Taekwondo Judo  Karate BJJ Muay Thai References
-  <p>Description of Taekwondo</p>
-  <p>Pictures and Videos of Taekwondo players</p>
+
+  ![Taekwondo](./asset/T%20Wireframe.png)
 
 ## Judo
-  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
-  <p>Description of Judo</p>
-  <p>Pictures and Videos of Judo players</p>
+ 
+ ![Judo](./asset/J%20Wireframe.png)
 
 ## Karate
-  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
-<p>Description of Karate</p>
-<p>Pictures and Videos of Karate players</p>
+ 
+ ![Karate](./asset/K%20Wireframe.png)
 
 ## BJJ
-  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
-<p>Description of BJJ</p>
-<p>Pictures and Videos of BJJ players</p>
+
+![BJJ](./asset/BJJ%20Wireframe.png)
 
 ## Muay Thai
-  ### Home About Us Taekwondo Judo Karate BJJ Muay Thai References
-<p>Description of Muay Thai</p>
-<p>Pictures and Videos of Muay Thai players</p>
+
+![MT](./asset/MT%20Wireframe.png)
 
 ## References
 
