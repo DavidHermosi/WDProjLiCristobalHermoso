@@ -57,7 +57,7 @@ With the help of JS from the Home Page and each martial art's webpage, our websi
 
 ### Incorporation of HTML Forms:
 <p>
-Our website will use HTML forms for members who sign-up to have additional information on each martial art. When our users click the dropdown of our blocked content they will have the option to sign-up for our website and ask them for a username, email, and password, that will be stored on external cloud storage, particularly Firebase.
+Our website will use HTML forms for members who sign-up to have additional information on each martial art. When our users click the dropdown of our blocked content they will have the option to sign-up for our website and ask them for a username, email, and password, that will be stored locally on the browser.
 <p>
 
 
