@@ -1,23 +1,21 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sign Up - Martial Arts and The World</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="../asset/hermoso_cristobal_logo.png">
-<link rel="stylesheet" href="./SU.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Martial Arts and The World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../asset/hermoso_cristobal_logo.png">
+    <link rel="stylesheet" href="./SU.css">
 </head>
 <body>
- 
+
     <div class="overlay"></div>
 
+    <!-- Fixed Header Structure -->
     <header>
         <nav>
             <h1>
@@ -30,12 +28,14 @@
                 <a href="./MT.html">Muay Thai</a>
                 <a href="./Ref.html">References</a>
             </h1>
+            <!-- User Icon Inside Nav (FIXED) -->
+            <a href="./SU.html" style="display: flex; align-items: center; margin-left: auto;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </a>
         </nav>
-      <a href="./SU.html" style="display: flex; align-items: center;">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-        <circle cx="12" cy="7" r="4"></circle>
-    </svg>
     </header>
 
     <main>
@@ -120,109 +120,9 @@
     </footer>
 
     <!-- LocalStorage Auth Script -->
-    <script src="./auth.js"></script>
+    <script src="./SU.js"></script>
     
-    <script>
-        // Tab Switching
-        function switchTab(tab) {
-            const loginForm = document.getElementById('loginForm');
-            const signupForm = document.getElementById('signupForm');
-            const buttons = document.querySelectorAll('.tab-button');
-            const title = document.querySelector('.signup-title');
 
-            if (tab === 'login') {
-                loginForm.classList.add('active');
-                signupForm.classList.remove('active');
-                buttons[0].classList.add('active');
-                buttons[1].classList.remove('active');
-                title.textContent = 'LOGIN';
-            } else {
-                signupForm.classList.add('active');
-                loginForm.classList.remove('active');
-                buttons[1].classList.add('active');
-                buttons[0].classList.remove('active');
-                title.textContent = 'SIGN UP';
-            }
-            
-            clearMessages();
-        }
 
-        function clearMessages() {
-            document.getElementById('loginError').textContent = '';
-            document.getElementById('signupError').textContent = '';
-            document.getElementById('successMessage').classList.remove('show');
-        }
-
-        function showSuccess(message) {
-            const successMsg = document.getElementById('successMessage');
-            successMsg.textContent = message;
-            successMsg.classList.add('show');
-        }
-
-        function showError(elementId, message) {
-            const errorElement = document.getElementById(elementId);
-            if (errorElement) {
-                errorElement.textContent = message;
-                setTimeout(() => {
-                    errorElement.textContent = '';
-                }, 3000);
-            }
-        }
-
-        // Login Handler
-        function handleLogin(event) {
-            event.preventDefault();
-            
-            const username = document.getElementById('loginUsername').value;
-            const password = document.getElementById('loginPassword').value;
-
-            const result = auth.login(username, password);
-
-            if (result.success) {
-                showSuccess('✅ Login successful! Redirecting...');
-                setTimeout(() => {
-                    window.location.href = '../index.html';
-                }, 1500);
-            } else {
-                showError('loginError', result.message);
-            }
-        }
-
-        // Signup Handler
-        function handleSignup(event) {
-            event.preventDefault();
-            
-            const username = document.getElementById('signupUsername').value;
-            const email = document.getElementById('signupEmail').value;
-            const password = document.getElementById('signupPassword').value;
-            const confirmPassword = document.getElementById('signupConfirmPassword').value;
-
-            if (password !== confirmPassword) {
-                showError('signupError', 'Passwords do not match!');
-                return;
-            }
-
-            const result = auth.signup(username, email, password);
-
-            if (result.success) {
-                showSuccess('✅ Account created! Redirecting...');
-                setTimeout(() => {
-                    window.location.href = '../index.html';
-                }, 1500);
-            } else {
-                showError('signupError', result.message);
-            }
-        }
-
-        // Check if already logged in
-        window.addEventListener('DOMContentLoaded', () => {
-            if (auth.isLoggedIn()) {
-                showSuccess('You are already logged in! Redirecting...');
-                setTimeout(() => {
-                    window.location.href = '../index.html';
-                }, 1500);
-            }
-        });
-    </script>
 </body>
 </html>
