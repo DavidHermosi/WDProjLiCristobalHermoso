@@ -15,219 +15,215 @@
 
 </head>
 <body>
-<!-- Navigation Bar -->
-<nav>
-<div class="nav-links">
-<a href="../index.html">Home</a>
-<a href="./AU.html">About Us</a>
-<a href="./KT.html">Karate</a>
-<a href="./TKD.html">Taekwondo</a>
-<a href="./JD.html">Judo</a>
-<a href="./BJJ.html">Brazilian Jiu Jitsu</a>
-<a href="./MT.html">Muay Thai</a>
-<a href="./Ref.html">References</a>
-</div>
-<div class="nav-icon" title="Login / Sign Up">
-<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-<circle cx="12" cy="7" r="4"></circle>
-</svg>
-</div>
-</nav>
+    <!-- Background Video -->
+    <video id="bg-video" autoplay muted loop>
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-martial-artist-practicing-karate-movements-31114-large.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
 
-```
-<!-- Main Content -->
-<div class="main-container">
-<div class="signup-box">
-<h1 class="signup-title">SIGN UP</h1>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>
+                <a href="../index.html">Home</a>
+                <a href="./AU.html">About Us</a>
+                <a href="./KT.html">Karate</a>
+                <a href="./TKD.html">Taekwondo</a>
+                <a href="./JD.html">Judo</a>
+                <a href="./BJJ.html">Brazilian Jiu Jitsu</a>
+                <a href="./MT.html">Muay Thai</a>
+                <a href="./Ref.html">References</a>
+            </h1>
+        </nav>
+    </header>
 
-<!-- Tab Switcher -->
-<div class="tab-switcher">
-<button class="tab-button" onclick="switchTab('login')">Login</button>
-<button class="tab-button active" onclick="switchTab('signup')">Sign Up</button>
-</div>
+    <!-- Main Content -->
+    <main>
+        <div class="signup-box">
+            <h2 class="signup-title">SIGN UP</h2>
 
-<!-- Success Message -->
-<div id="successMessage" class="success-message"></div>
+            <!-- Tab Switcher -->
+            <div class="tab-switcher">
+                <button class="tab-button" onclick="switchTab('login')">Login</button>
+                <button class="tab-button active" onclick="switchTab('signup')">Sign Up</button>
+            </div>
 
-<!-- Login Form -->
-<div id="loginForm" class="form-content">
-<form onsubmit="handleLogin(event)">
-<div class="form-field">
-<label for="loginUsername">Username</label>
-<input type="text" id="loginUsername" placeholder="Lorem ipsum dolor sit amet et" required>
-</div>
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message"></div>
 
-<div class="form-field">
-<label for="loginPassword">Password</label>
-<input type="password" id="loginPassword" placeholder="Lorem ipsum dolor sit amet et" required>
-</div>
+            <!-- Login Form -->
+            <div id="loginForm" class="form-content">
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-field">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" id="loginUsername" placeholder="Enter your username" required>
+                    </div>
 
-<span id="loginError" class="error-message"></span>
+                    <div class="form-field">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    </div>
 
-<button type="submit" class="submit-button">Login</button>
-</form>
-</div>
+                    <span id="loginError" class="error-message"></span>
 
-<!-- Sign Up Form -->
-<div id="signupForm" class="form-content active">
-<form onsubmit="handleSignup(event)">
-<div class="form-field">
-<label for="signupUsername">Username</label>
-<input type="text" id="signupUsername" placeholder="Lorem ipsum dolor sit amet et" required minlength="3">
-</div>
+                    <button type="submit" class="submit-button">Login</button>
+                </form>
+            </div>
 
-<div class="form-field">
-<label for="signupEmail">Email</label>
-<input type="email" id="signupEmail" placeholder="Lorem ipsum dolor sit amet et" required>
-</div>
+            <!-- Sign Up Form -->
+            <div id="signupForm" class="form-content active">
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-field">
+                        <label for="signupUsername">Username</label>
+                        <input type="text" id="signupUsername" placeholder="Choose a username" required minlength="3">
+                    </div>
 
-<div class="form-field">
-<label for="signupPassword">Password</label>
-<input type="password" id="signupPassword" placeholder="Lorem ipsum dolor sit amet et" required minlength="6">
-</div>
+                    <div class="form-field">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    </div>
 
-<div class="form-field">
-<label for="signupConfirmPassword">Confirm Password</label>
-<input type="password" id="signupConfirmPassword" placeholder="Lorem ipsum dolor sit amet et" required>
-</div>
+                    <div class="form-field">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="Create a password (min 6 chars)" required minlength="6">
+                    </div>
 
-<span id="signupError" class="error-message"></span>
+                    <div class="form-field">
+                        <label for="signupConfirmPassword">Confirm Password</label>
+                        <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required>
+                    </div>
 
-<button type="submit" class="submit-button">Button</button>
-</form>
-</div>
+                    <span id="signupError" class="error-message"></span>
 
-<div class="back-link">
-<a href="../index.html">← Back to Home</a>
-</div>
-</div>
-</div>
+                    <button type="submit" class="submit-button">Create Account</button>
+                </form>
+            </div>
 
-<!-- Footer -->
-<footer>
-<h3>Martial Arts and The World</h3>
-<p>Exploring martial arts traditions and<br>techniques from around the globe</p>
+            <div class="back-link">
+                <a href="../index.html">← Back to Home</a>
+            </div>
+        </div>
+    </main>
 
-<div class="creators">
-<p>Created by <strong>Keisha Cristobal</strong> and <strong>David Hermoso</strong></p>
-</div>
+    <!-- Footer -->
+    <footer>
+        <p><strong>Martial Arts and The World</strong></p>
+        <p>Exploring martial arts traditions and techniques from around the globe</p>
+        <p>Created by <strong>Keisha Cristobal</strong> & <strong>David Hermoso</strong></p>
+        
+        <div class="footer-copyright">
+            <p>&copy; Martial Arts and The World. All rights reserved.</p>
+            <p>
+                <a href="./Ref.html">References</a> | 
+                <a href="./AU.html">About Us</a>
+            </p>
+        </div>
+    </footer>
 
-<div class="copyright">
-<p>© Martial Arts and The World. All rights reserved.</p>
-<div class="footer-links">
-<a href="./Ref.html">References</a> |
-<a href="./AU.html">About Us</a>
-</div>
-</div>
-</footer>
+    <!-- LocalStorage Auth Script -->
+    <script src="./auth.js"></script>
+    
+    <script>
+        // Tab Switching
+        function switchTab(tab) {
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+            const buttons = document.querySelectorAll('.tab-button');
+            const title = document.querySelector('.signup-title');
 
-<!-- LocalStorage Auth Script -->
-<script src="./auth.js"></script>
+            if (tab === 'login') {
+                loginForm.classList.add('active');
+                signupForm.classList.remove('active');
+                buttons[0].classList.add('active');
+                buttons[1].classList.remove('active');
+                title.textContent = 'LOGIN';
+            } else {
+                signupForm.classList.add('active');
+                loginForm.classList.remove('active');
+                buttons[1].classList.add('active');
+                buttons[0].classList.remove('active');
+                title.textContent = 'SIGN UP';
+            }
+            
+            clearMessages();
+        }
 
-<script>
-// Tab Switching
-function switchTab(tab) {
-const loginForm = document.getElementById('loginForm');
-const signupForm = document.getElementById('signupForm');
-const buttons = document.querySelectorAll('.tab-button');
-const title = document.querySelector('.signup-title');
+        function clearMessages() {
+            document.getElementById('loginError').textContent = '';
+            document.getElementById('signupError').textContent = '';
+            document.getElementById('successMessage').classList.remove('show');
+        }
 
-if (tab === 'login') {
-loginForm.classList.add('active');
-signupForm.classList.remove('active');
-buttons[0].classList.add('active');
-buttons[1].classList.remove('active');
-title.textContent = 'LOGIN';
-} else {
-signupForm.classList.add('active');
-loginForm.classList.remove('active');
-buttons[1].classList.add('active');
-buttons[0].classList.remove('active');
-title.textContent = 'SIGN UP';
-}
+        function showSuccess(message) {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.textContent = message;
+            successMsg.classList.add('show');
+        }
 
-clearMessages();
-}
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            if (errorElement) {
+                errorElement.textContent = message;
+                setTimeout(() => {
+                    errorElement.textContent = '';
+                }, 3000);
+            }
+        }
 
-function clearMessages() {
-document.getElementById('loginError').textContent = '';
-document.getElementById('signupError').textContent = '';
-document.getElementById('successMessage').classList.remove('show');
-}
+        // Login Handler
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('loginUsername').value;
+            const password = document.getElementById('loginPassword').value;
 
-function showSuccess(message) {
-const successMsg = document.getElementById('successMessage');
-successMsg.textContent = message;
-successMsg.classList.add('show');
-}
+            const result = auth.login(username, password);
 
-function showError(elementId, message) {
-const errorElement = document.getElementById(elementId);
-if (errorElement) {
-errorElement.textContent = message;
-setTimeout(() => {
-errorElement.textContent = '';
-}, 3000);
-}
-}
+            if (result.success) {
+                showSuccess('✅ Login successful! Redirecting...');
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1500);
+            } else {
+                showError('loginError', result.message);
+            }
+        }
 
-// Login Handler
-function handleLogin(event) {
-event.preventDefault();
+        // Signup Handler
+        function handleSignup(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('signupUsername').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('signupConfirmPassword').value;
 
-const username = document.getElementById('loginUsername').value;
-const password = document.getElementById('loginPassword').value;
+            if (password !== confirmPassword) {
+                showError('signupError', 'Passwords do not match!');
+                return;
+            }
 
-const result = auth.login(username, password);
+            const result = auth.signup(username, email, password);
 
-if (result.success) {
-showSuccess('✅ Login successful! Redirecting...');
-setTimeout(() => {
-window.location.href = '../index.html';
-}, 1500);
-} else {
-showError('loginError', result.message);
-}
-}
+            if (result.success) {
+                showSuccess('✅ Account created! Redirecting...');
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1500);
+            } else {
+                showError('signupError', result.message);
+            }
+        }
 
-// Signup Handler
-function handleSignup(event) {
-event.preventDefault();
-
-const username = document.getElementById('signupUsername').value;
-const email = document.getElementById('signupEmail').value;
-const password = document.getElementById('signupPassword').value;
-const confirmPassword = document.getElementById('signupConfirmPassword').value;
-
-if (password !== confirmPassword) {
-showError('signupError', 'Passwords do not match!');
-return;
-}
-
-const result = auth.signup(username, email, password);
-
-if (result.success) {
-showSuccess('✅ Account created! Redirecting...');
-setTimeout(() => {
-window.location.href = '../index.html';
-}, 1500);
-} else {
-showError('signupError', result.message);
-}
-}
-
-// Check if already logged in
-window.addEventListener('DOMContentLoaded', () => {
-if (auth.isLoggedIn()) {
-showSuccess('You are already logged in! Redirecting...');
-setTimeout(() => {
-window.location.href = '../index.html';
-}, 1500);
-}
-});
-</script>
-```
-
+        // Check if already logged in
+        window.addEventListener('DOMContentLoaded', () => {
+            if (auth.isLoggedIn()) {
+                showSuccess('You are already logged in! Redirecting...');
+                setTimeout(() => {
+                    window.location.href = '../index.html';
+                }, 1500);
+            }
+        });
+    </script>
 </body>
 </html>
