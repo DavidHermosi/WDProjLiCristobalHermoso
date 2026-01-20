@@ -343,3 +343,177 @@ footer a:hover {
         height: 150px;
     }
 }
+
+    /* Member Lock Overlay */
+        .member-lock-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .member-lock-overlay.hidden {
+            display: none !important;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .lock-content {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: linear-gradient(135deg, #182838 0%, #1a1f3a 100%);
+            border: 2px solid rgba(124, 245, 255, 0.3);
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(0, 183, 194, 0.3);
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .lock-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .lock-title {
+            color: #E30613;
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(227, 6, 19, 0.5);
+        }
+
+        .lock-subtitle {
+            color: #E8F0F2;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .lock-features {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(124, 245, 255, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .lock-features h3 {
+            color: #DAA520;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .lock-features ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lock-features li {
+            color: #E8F0F2;
+            font-size: 1.1em;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(124, 245, 255, 0.1);
+        }
+
+        .lock-features li:last-child {
+            border-bottom: none;
+        }
+
+        .lock-features li::before {
+            content: "✓ ";
+            color: #4ECDC4;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .signup-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #E30613 0%, #ff0718 100%);
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(227, 6, 19, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+
+        .signup-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(227, 6, 19, 0.7);
+            background: linear-gradient(135deg, #ff0718 0%, #E30613 100%);
+        }
+
+        .signup-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Blur main content when locked */
+        body.locked main {
+            filter: blur(8px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        body.locked header {
+            filter: blur(3px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .lock-content {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            .lock-title {
+                font-size: 2em;
+            }
+
+            .lock-subtitle {
+                font-size: 1.1em;
+            }
+
+            .signup-button {
+                padding: 15px 40px;
+                font-size: 1.1em;
+            }
+        }

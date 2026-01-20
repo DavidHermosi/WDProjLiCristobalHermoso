@@ -13,10 +13,37 @@
    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="./GlobalStyle.css">
     <link rel="icon" type="image/png" href="../asset/hermoso_cristobal_logo.png">
+ 
 </head>
 
-<body>
+<body class="locked">
+    <!-- Member Lock Overlay -->
+    <div class="member-lock-overlay" id="memberLock">
+        <div class="lock-content">
+            <div class="lock-icon">🔒</div>
+            <h1 class="lock-title">SIGN UP TO UNLOCK</h1>
+            <p class="lock-subtitle">
+                Create a <strong>free account</strong> to access exclusive Muay Thai content!
+            </p>
 
+            <div class="lock-features">
+                <h3>🥊 What You'll Get:</h3>
+                <ul>
+                    <li>Complete Muay Thai technique library</li>
+                    <li>Video demonstrations of all moves</li>
+                    <li>Stances, kicks, punches, elbows & knees</li>
+                    <li>Traditional Thai terminology</li>
+                    <li>Expert training tips</li>
+                </ul>
+            </div>
+
+            <a href="./SU.html" class="signup-button">Sign Up Free</a>
+            
+            <p style="color: #888; margin-top: 20px; font-size: 0.9em;">
+                Already have an account? <a href="./SU.html" style="color: #4ECDC4; text-decoration: none;">Login here</a>
+            </p>
+        </div>
+    </div>
 
     <div class="overlay"></div>
 
@@ -43,7 +70,7 @@
     <main>
          <h2>Muay Thai (มวยไทย)</h2>
         <ul>
-            <li>Literally meaning “Thai Boxing” is nicknamed as the “Art of Eight Limbs” using punches, knees, elbows, and kicks.</li>
+            <li>Literally meaning "Thai Boxing" is nicknamed as the "Art of Eight Limbs" using punches, knees, elbows, and kicks.</li>
             <li>It originated from military use around the 13th century during the Sukhothai Kingdom. It has taken inspiration from Muay Boran, a more ancient Thai martial art.</li>
             <li>Estimated 100 million people follow the martial art with around 60,000 practitioners in Thailand.</li>
             <li>Muay Thai is Thailand's national sport and has a rich cultural heritage, often accompanied by traditional music and rituals during matches.</li>
@@ -473,7 +500,9 @@
     </div>
     </footer>
     
+    <!-- Load auth.js FIRST before index.js -->
+    <script src="./SU.js"></script>
     <script src="./index.js"></script>
-
+    
 </body>
 </html>

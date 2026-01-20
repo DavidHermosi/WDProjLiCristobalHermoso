@@ -35,3 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // For example, you could auto-open the first dropdown, etc.
 });
 
+        // Check if user is logged in
+        window.addEventListener('DOMContentLoaded', () => {
+            const memberLock = document.getElementById('memberLock');
+            const body = document.body;
+
+            // Check auth status
+            if (typeof auth !== 'undefined' && auth.isLoggedIn()) {
+                // User is LOGGED IN - unlock content
+                memberLock.classList.add('hidden');
+                body.classList.remove('locked');
+                console.log('✅ Member access granted');
+            } else {
+                // User is GUEST - show lock screen
+                memberLock.classList.remove('hidden');
+                body.classList.add('locked');
+                console.log('🔒 Guest view - content locked');
+
+
