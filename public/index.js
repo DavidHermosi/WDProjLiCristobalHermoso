@@ -51,5 +51,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 memberLock.classList.remove('hidden');
                 body.classList.add('locked');
                 console.log('🔒 Guest view - content locked');
-
-
+            }
+        });
