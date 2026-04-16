@@ -6,8 +6,35 @@
 
 ![Logo Design](./asset/hermoso_cristobal_logo.png)
 
+<<<<<<< HEAD
 ### FINAL MODIFICATION PROPOSAL
 
+=======
+### FINAL MODIFICATION PROPOSAL:
+<p>
+We plan to use the full CRUD process by allowing users to create an account throw our Sign-Up/Login page, where their account information will be saved using localStorage. Once they have an account they will be able to customise their account information and create their avatar for their fighter's appearance, which is how they update their data. To delete data, they can choose to log out of their current session, or to delete their account, which will remove all of their data from localStorage.
+</p>
+
+![Profile](./asset/2.jpg)
+
+![Hair Color](./asset/3.jpg)
+
+![Skin Color](./asset/4.jpg)
+
+![Tutorial](./asset/5.jpg)
+
+![Welcome Message](./asset/6.jpg)
+
+![Movement](./asset/7.jpg)
+
+![Win](./asset/9.jpg)
+
+![Loss](./asset/10.jpg)
+
+![Progression1](./asset/11.jpg)
+
+![Progression2](./asset/12.jpg)
+>>>>>>> 8730e1e9bdf69001d20aedc7743f7b3e9d0c4f25
 
 ### Site Description:
 <p>We aim for our website to show appreciation and acknowledge the cultural beauty and diversity of the Top 5 most practiced martial arts around the world. Our website provides an overview of the origins and descriptions of each martial art we include. By exploring the origins, philosophies, and defining techniques of each martial art, we seek to honor how these disciplines have shaped cultures and connected people across the globe.
