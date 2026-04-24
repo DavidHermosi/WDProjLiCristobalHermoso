@@ -11,10 +11,40 @@
     <link rel="stylesheet" href="./SU.css">
 
     <style>
+        html { scroll-behavior: smooth; }
+
+        /* Scroll progress bar */
+        #scroll-progress {
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(90deg, #E30613, #ff6b35, #7CF5FF);
+            width: 0%; z-index: 9999; transition: width 0.1s linear;
+            pointer-events: none;
+        }
+
+        /* Back to top */
+        #back-to-top {
+            position: fixed; bottom: 30px; right: 30px;
+            width: 44px; height: 44px;
+            background: rgba(18,30,50,0.9); border: 1px solid rgba(124,245,255,0.25);
+            border-radius: 50%; color: #7CF5FF; font-size: 1.2rem;
+            cursor: pointer; display: flex; align-items: center; justify-content: center;
+            opacity: 0; transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s, background 0.3s, border-color 0.3s;
+            z-index: 500; pointer-events: none; border-style: solid;
+        }
+        #back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        #back-to-top:hover { background: rgba(227,6,19,0.2); border-color: rgba(227,6,19,0.5); color: #E30613; }
+
         .profile-wrap {
             max-width: 860px;
             margin: 0 auto;
             padding: 20px;
+            animation: fadeInUp 0.5s ease-out both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         /* ── Cards ── */
@@ -172,11 +202,7 @@
             text-decoration: none;
             font-family: Tahoma, sans-serif;
         }
-        .pbtn-red {
-            background: #E30613;
-            color: #fff;
-            border-color: #E30613;
-        }
+        .pbtn-red { background: #E30613; color: #fff; border-color: #E30613; }
         .pbtn-red:hover { background: transparent; color: #E30613; }
         .pbtn-ghost {
             background: transparent;
@@ -229,6 +255,17 @@
             margin-left: 5px;
             letter-spacing: 0;
             text-transform: none;
+        }
+
+        /* ── Section divider inside edit form ── */
+        .edit-section-label {
+            font-size: 0.7rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: rgba(124,245,255,0.5);
+            margin: 22px 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(124,245,255,0.1);
         }
 
         /* ── Color swatches ── */
@@ -308,11 +345,11 @@
         /* ── Collapsible body ── */
         .pcollapse {
             overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.3s;
+            transition: max-height 0.45s ease, opacity 0.35s;
             max-height: 0;
             opacity: 0;
         }
-        .pcollapse.open { max-height: 1400px; opacity: 1; }
+        .pcollapse.open { max-height: 1600px; opacity: 1; }
 
         .btn-row {
             display: flex;
@@ -326,6 +363,24 @@
             margin: 22px 0;
         }
 
+        /* ── Show Password toggle ── */
+        .pw-wrap { position: relative; }
+        .pw-wrap input { padding-right: 44px; }
+        .pw-eye {
+            position: absolute;
+            right: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: rgba(232,240,242,0.35);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0;
+            transition: color 0.2s;
+        }
+        .pw-eye:hover { color: rgba(124,245,255,0.7); }
+
         @media (max-width: 580px) {
             .pcard { padding: 20px 18px; }
             .profile-header-card { padding: 30px 18px; }
@@ -333,6 +388,7 @@
     </style>
 </head>
 <body>
+    <div id="scroll-progress"></div>
     <div class="overlay"></div>
 
     <!-- ── HEADER ── -->
@@ -346,6 +402,7 @@
                 <a href="./JD.html">Judo</a>
                 <a href="./BJJ.html">Brazilian Jiu Jitsu</a>
                 <a href="./MT.html">Muay Thai</a>
+                <a href="./Game.html">Game</a>
                 <a href="./Ref.html">References</a>
             </h1>
             <a href="./Profile.html" style="display:flex;align-items:center;margin-left:auto;">
@@ -375,14 +432,14 @@
                 <!-- Profile Header -->
                 <div class="pcard profile-header-card">
                     <div class="avatar-circle" id="p-avatar">?</div>
-                    <p class="profile-name"   id="p-name">—</p>
+                    <p class="profile-name" id="p-name">—</p>
                     <span class="profile-badge">🥋 Martial Arts Member</span><br>
                     <p class="profile-joined" id="p-joined" style="margin-top:8px;">Joined —</p>
                 </div>
 
                 <!-- Stats -->
                 <div class="pcard">
-                    <div class="pcard-title" style="cursor:default;">⚔️ Stats</div>
+                    <div class="pcard-title" style="cursor:default;">⚔️ Game Stats</div>
                     <div class="stats-grid">
                         <div class="stat-box">
                             <span class="stat-value" id="s-score">0</span>
@@ -404,46 +461,58 @@
                     <h2>🎮 Fighter Game</h2>
                     <p>Put your martial arts skills to the test!<br>
                        Beat waves of enemies and climb the belt ranks.</p>
-                    <a href="./Game.html" class="pbtn pbtn-red"
-                       style="text-decoration:none;">⚔️ Fight Now</a>
+                    <a href="./Game.html" class="pbtn pbtn-red" style="text-decoration:none;">⚔️ Fight Now</a>
                 </div>
 
-                <!-- Edit Profile (collapsible) -->
+                <!-- Edit Profile (open by default) -->
                 <div class="pcard">
-                    <div class="pcard-title" id="toggle-edit"
+                    <div class="pcard-title open" id="toggle-edit"
                          onclick="toggleSection('body-edit', this)">
                         ✏️ Edit Profile
-                        <span class="toggle-arrow">▼</span>
+                        <span class="toggle-arrow" style="transform:rotate(180deg);">▼</span>
                     </div>
-                    <div class="pcollapse" id="body-edit">
+                    <div class="pcollapse open" id="body-edit">
 
                         <div class="palert" id="edit-alert"></div>
 
+                        <!-- Account details section -->
+                        <p class="edit-section-label">Account Details</p>
+
                         <div class="pfield">
                             <label>Username</label>
-                            <input type="text" id="f-username" placeholder="New username" minlength="3">
+                            <input type="text" id="f-username" placeholder="New username" minlength="3" autocomplete="username">
                         </div>
                         <div class="pfield">
                             <label>Email</label>
-                            <input type="email" id="f-email" placeholder="New email">
+                            <input type="email" id="f-email" placeholder="New email" autocomplete="email">
                         </div>
+
+                        <!-- Password section -->
+                        <p class="edit-section-label">Change Password <span class="pfield-note">(leave blank to keep current)</span></p>
+
                         <div class="pfield">
-                            <label>New Password
-                                <span class="pfield-note">(leave blank to keep current)</span>
-                            </label>
-                            <input type="password" id="f-pw" placeholder="Minimum 6 characters">
+                            <label>New Password</label>
+                            <div class="pw-wrap">
+                                <input type="password" id="f-pw" placeholder="Minimum 6 characters" autocomplete="new-password">
+                                <button type="button" class="pw-eye" onclick="togglePw('f-pw',this)" title="Show/hide password">👁</button>
+                            </div>
                         </div>
                         <div class="pfield">
                             <label>Confirm New Password</label>
-                            <input type="password" id="f-pw2" placeholder="Re-enter new password">
+                            <div class="pw-wrap">
+                                <input type="password" id="f-pw2" placeholder="Re-enter new password" autocomplete="new-password">
+                                <button type="button" class="pw-eye" onclick="togglePw('f-pw2',this)" title="Show/hide password">👁</button>
+                            </div>
                         </div>
+
+                        <!-- Avatar colour -->
+                        <p class="edit-section-label">Avatar Color</p>
                         <div class="pfield">
-                            <label>Avatar Color</label>
                             <div class="swatches" id="swatches-wrap"></div>
                         </div>
 
                         <div class="btn-row" style="margin-top:22px;">
-                            <button class="pbtn pbtn-red"   onclick="handleUpdate()">Save Changes</button>
+                            <button class="pbtn pbtn-red" onclick="handleUpdate()">💾 Save Changes</button>
                             <button class="pbtn pbtn-ghost"
                                     onclick="toggleSection('body-edit', document.getElementById('toggle-edit'))">Cancel</button>
                         </div>
@@ -503,8 +572,45 @@
         </div>
     </footer>
 
+    <button id="back-to-top" title="Back to top">↑</button>
+
     <script src="./SU.js"></script>
     <script src="./Profile.js"></script>
-    <script src="../loading.js"></script>
+    <script src="../NavAuth.js"></script>
+
+    <script>
+        // ── Scroll progress ──
+        const bar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            const s = window.scrollY, h = document.documentElement.scrollHeight - window.innerHeight;
+            bar.style.width = (h > 0 ? (s/h)*100 : 0) + '%';
+        }, { passive: true });
+
+        // ── Back to top ──
+        const btt = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400), { passive: true });
+        btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // ── Show/hide password ──
+        function togglePw(inputId, btn) {
+            const inp = document.getElementById(inputId);
+            if (inp.type === 'password') {
+                inp.type = 'text';
+                btn.style.color = 'rgba(124,245,255,0.7)';
+            } else {
+                inp.type = 'password';
+                btn.style.color = '';
+            }
+        }
+
+        // ── Footer animation ──
+        const footer = document.getElementById('animatedFooter');
+        if (footer) {
+            const obs = new IntersectionObserver(e => {
+                if (e[0].isIntersecting) { footer.classList.add('visible'); obs.disconnect(); }
+            }, { threshold: 0.1 });
+            obs.observe(footer);
+        }
+    </script>
 </body>
 </html>

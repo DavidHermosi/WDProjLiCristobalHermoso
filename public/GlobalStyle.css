@@ -517,3 +517,117 @@ footer a:hover {
                 font-size: 1.1em;
             }
         }
+
+/* ── IMPROVEMENTS ── */
+
+html { scroll-behavior: smooth; }
+
+/* Scroll progress bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #E30613, #ff6b35, #7CF5FF);
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.1s linear;
+    pointer-events: none;
+}
+
+/* Better section headers */
+.section-header {
+    color: #E8F0F2 !important;
+    font-size: 1.6em !important;
+    margin: 40px 0 20px !important;
+    text-align: center;
+    letter-spacing: 3px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #E30613, transparent);
+}
+
+/* Back-to-top button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    background: rgba(18, 30, 50, 0.9);
+    border: 1px solid rgba(124, 245, 255, 0.25);
+    border-radius: 50%;
+    color: #7CF5FF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s, background 0.3s, border-color 0.3s;
+    z-index: 500;
+    pointer-events: none;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#back-to-top:hover {
+    background: rgba(227, 6, 19, 0.2);
+    border-color: rgba(227, 6, 19, 0.5);
+    color: #E30613;
+}
+
+/* Fade-in animation for main content */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    animation: fadeInUp 0.55s ease-out both;
+}
+
+/* Better nav active link highlight */
+nav h1 a.active-page {
+    background-image: radial-gradient(#233950, #214162, #0d253c);
+    color: #E30613 !important;
+    border-color: rgba(124, 245, 255, 0.3);
+    border-radius: 12px;
+}
+
+/* Improved ul info boxes */
+main ul p {
+    font-size: 1.05em;
+    line-height: 1.9;
+    color: #E8F0F2;
+}
+
+/* Move count badge on sections */
+.moves-section h3 {
+    position: relative;
+}
+
+/* Smoother dropdown open transition */
+.moves-dropdown {
+    transition: transform 0.25s ease, box-shadow 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Card appear animation */
+.moves-dropdown {
+    animation: fadeInUp 0.4s ease-out both;
+}

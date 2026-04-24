@@ -249,13 +249,19 @@
             wrap.appendChild(trigger);
             wrap.appendChild(dd);
 
-            /* ── Touch / click fallback (for mobile where :hover doesn't persist) ── */
+            /* ── Click: toggle dropdown on mobile, navigate to Profile on desktop ── */
             trigger.addEventListener('click', (e) => {
                 e.stopPropagation();
-                window.location.href = PUBLIC + 'Profile.html';
+                // On touch devices toggle the dropdown; on desktop go straight to profile
+                if (window.matchMedia('(pointer: coarse)').matches) {
+                    const isOpen = wrap.classList.toggle('open');
+                    trigger.setAttribute('aria-expanded', String(isOpen));
+                } else {
+                    window.location.href = PUBLIC + 'Profile.html';
+                }
             });
 
-            /* Close .open when clicking outside (hover handles mouse, this handles touch) */
+            /* Close .open when clicking outside */
             document.addEventListener('click', () => {
                 wrap.classList.remove('open');
                 trigger.setAttribute('aria-expanded', 'false');
