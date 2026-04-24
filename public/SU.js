@@ -240,10 +240,10 @@ window.auth = auth;
             const result = auth.login(username, password);
 
             if (result.success) {
-                showSuccess('✅ Login successful! Redirecting...');
+                showSuccess('✅ Login successful! Redirecting to your profile...');
                 setTimeout(() => {
                     window.location.href = './Profile.html';
-                }, 1500);
+                }, 1200);
             } else {
                 showError('loginError', result.message);
             }
@@ -266,21 +266,40 @@ window.auth = auth;
             const result = auth.signup(username, email, password);
 
             if (result.success) {
-                showSuccess('✅ Account created! Redirecting...');
+                showSuccess('✅ Account created! Redirecting to your profile...');
                 setTimeout(() => {
                     window.location.href = './Profile.html';
-                }, 1500);
+                }, 1200);
             } else {
                 showError('signupError', result.message);
             }
         }
 
-        // Only auto-redirect on the SU.html page itself
+        // Check if already logged in — redirect immediately, hide the form
         window.addEventListener('DOMContentLoaded', () => {
-            if (window.location.pathname.includes('SU.html') && auth.isLoggedIn()) {
-                showSuccess('You are already logged in! Redirecting...');
+            if (auth.isLoggedIn()) {
+                // Hide the form so there's nothing awkward showing
+                const box = document.querySelector('.signup-box');
+                if (box) {
+                    box.innerHTML = `
+                        <div style="text-align:center;padding:40px 20px;">
+                            <div style="font-size:3rem;margin-bottom:16px;">👤</div>
+                            <h2 class="signup-title" style="margin-bottom:16px;">Already Logged In</h2>
+                            <p style="color:rgba(232,240,242,0.65);margin-bottom:28px;line-height:1.7;">
+                                Taking you to your profile…
+                            </p>
+                            <div style="width:48px;height:4px;background:linear-gradient(90deg,#E30613,#7CF5FF);border-radius:2px;margin:0 auto;animation:loadbar 1.2s ease-out forwards;"></div>
+                        </div>
+                        <style>
+                            @keyframes loadbar {
+                                from { width: 0; opacity: 0.4; }
+                                to   { width: 120px; opacity: 1; }
+                            }
+                        </style>
+                    `;
+                }
                 setTimeout(() => {
-                    window.location.href = '../index.html';
-                }, 1500);
+                    window.location.href = './Profile.html';
+                }, 1200);
             }
         });
