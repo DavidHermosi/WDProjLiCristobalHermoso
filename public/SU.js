@@ -242,7 +242,7 @@ window.auth = auth;
             if (result.success) {
                 showSuccess('✅ Login successful! Redirecting...');
                 setTimeout(() => {
-                    window.location.href = '../index.html';
+                    window.location.href = './Profile.html';
                 }, 1500);
             } else {
                 showError('loginError', result.message);
@@ -268,16 +268,16 @@ window.auth = auth;
             if (result.success) {
                 showSuccess('✅ Account created! Redirecting...');
                 setTimeout(() => {
-                    window.location.href = '../index.html';
+                    window.location.href = './Profile.html';
                 }, 1500);
             } else {
                 showError('signupError', result.message);
             }
         }
 
-        // Check if already logged in
+        // Only auto-redirect on the SU.html page itself
         window.addEventListener('DOMContentLoaded', () => {
-            if (auth.isLoggedIn()) {
+            if (window.location.pathname.includes('SU.html') && auth.isLoggedIn()) {
                 showSuccess('You are already logged in! Redirecting...');
                 setTimeout(() => {
                     window.location.href = '../index.html';
